@@ -18,9 +18,8 @@ app.get('/weather', async(req, res, next)=>{
    
 try{
   
- 
 const response = await fetchWeather();
-return response
+res.status(200).json(response)
 }catch(err){
   next(err)
 }
