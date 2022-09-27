@@ -20,7 +20,7 @@ try{
   
  
 const response = await fetchWeather();
-res.send(response)
+return response
 }catch(err){
   next(err)
 }
